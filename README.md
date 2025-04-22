@@ -25,18 +25,18 @@ NOTE: this section was last updated: `April 21 2025 11 PM MST`
 `0x000 - 0x3FF` is how large the memory mapping is. This equates to `1KiB` or
 `8,192b` of addressable ram.
 
-The memory will be layed out as follows:
+The memory will be laid out as follows: 
 - `0x000 - 0x007`: general purpose registers (8 8bit registers)
 - `0x008 - 0x047`: constants
 - `0x048 - 0x087`: globals
-- `0x088 - 0x27F`: shared dynamic memory
-- `0x280 - 0x3FF`: program instructions
+- `0x088 - 0x1FF`: shared dynamic memory
+- `0x200 - 0x3FF`: program instructions
 
 In human readable format:
 - 8 Bytes of general purpose registers
 - 64 Bytes of constant / read only values
 - 64 Bytes of global values
-- 448 Bytes of shared dynamic memory between the stack and heap
+- 376 Bytes of shared dynamic memory between the stack and heap
 - 512 Bytes of program instructions
 
 ### Registers
